@@ -1,0 +1,21 @@
+<section class="genders" [ngClass]="gender().id">
+    <h3 class="h3-text-silver">
+        {{ gender().value }}
+        <span class="highlight-line highlight-line--small"
+              [ngClass]="gender().id"
+        ></span>
+    </h3>
+    @if(gender().books.length < 3) {
+        <div class="no-books-text">
+            <img src="/images/book.png">
+            <p>No books for this gender</p>
+        </div>
+    } @else if (gender().books.length >= 3){
+        <div class="book-gender">
+            @for(book of gender().books; track book) {
+                <app-book-card [book]="book"></app-book-card>
+            }
+        </div>
+    }
+
+</section>

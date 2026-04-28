@@ -1,0 +1,12 @@
+<section  [ngClass]="book().gender.id">
+    <button class="favorite-btn" (click)="configFavorite()">
+        <span>{{ book().isFavorite ? '\u2764' : '\u2661' }}</span>
+    </button>
+    <div class="image">
+        <img [src]="book().image" alt="Book">
+    </div>
+    <div class="book-info">
+        <h2 class="h2-text">{{ book().title }}</h2>
+        <h3 class="h3-text">{{ book().author }}</h3>
+    </div>
+</section>

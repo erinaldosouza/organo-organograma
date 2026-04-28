@@ -1,0 +1,12 @@
+<section>
+
+    <h2 class="title-text">
+        My Readings
+    </h2>
+    <span class="highlight-line highlight-line--big"></span>
+    
+</section>
+
+@for(gender of genders; track gender) {
+    <app-reading-gender [gender]="gender"></app-reading-gender>
+}
